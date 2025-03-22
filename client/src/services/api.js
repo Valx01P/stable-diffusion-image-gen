@@ -1,11 +1,9 @@
 import axios from 'axios'
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || '/api'
-
 // Get list of available models
 export const getAvailableModels = async () => {
   try {
-    const response = await axios.get(`${API_BASE_URL}/available-models`)
+    const response = await axios.get(`api/available-models`)
     return response.data
   } catch (error) {
     console.error('Failed to fetch models:', error)
@@ -17,7 +15,7 @@ export const getAvailableModels = async () => {
 export const generateImage = async (prompt, modelId) => {
   try {
     const response = await axios.post(
-      `${API_BASE_URL}/generate-image`,
+      `api/generate-image`,
       { prompt, model_id: modelId },
       { responseType: 'blob' }  // Important for handling image data
     )
