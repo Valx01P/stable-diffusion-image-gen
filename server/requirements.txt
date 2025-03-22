@@ -1,4 +1,7 @@
 fastapi
 uvicorn
+python-multipart
+requests
+python-dotenv
 pydantic
-sqlalchemy
+pillow

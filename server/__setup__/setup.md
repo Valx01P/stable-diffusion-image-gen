@@ -4,6 +4,9 @@ create a file, main.py, add your http code
 
 uvicorn main:app --reload
 
+*** in app folder directory ***
+uvicorn app.main:app --reload
+
 ____
 
 ***
@@ -37,3 +40,8 @@ pip uninstall fastapi uvicorn
 
 
 http://localhost:8000/
+
+
+***
+docker run -d -p 8000:8000 --env HF_API_TOKEN=your_token_here --name server image-generator-server
+***
