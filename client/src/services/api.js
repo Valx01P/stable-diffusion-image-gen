@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_BASE_URL = '/api'  // This will be proxied in development
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api'
 
 // Get list of available models
 export const getAvailableModels = async () => {
