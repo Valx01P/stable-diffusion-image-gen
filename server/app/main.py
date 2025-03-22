@@ -8,7 +8,7 @@ app = FastAPI(title="Image Generator API",
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000"],  # React dev servers
+    allow_origins=["http://localhost:5173", "http://localhost:3000", "https://soothing-tranquility-production-0f1f.up.railway.app/"],  # React dev servers
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

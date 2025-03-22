@@ -7,7 +7,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'http://localhost:8000',
+        target: 'https://stable-diffusion-image-gen-production.up.railway.app/',
         changeOrigin: true,
       },
     },
